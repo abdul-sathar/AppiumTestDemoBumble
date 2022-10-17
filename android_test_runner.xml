@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Bumble Automation Tests" parallel="tests" thread-count="5">
+
+    <test name="Test on Android platform version 9.0">
+        <parameter name="deviceName" value="Device1"/>
+        <parameter name="port" value="4723"/>
+        <classes>
+            <class name="com.bumble.testcase.BumbleTestcases"/>
+        </classes>
+    </test>
+
+    <test name="Test on Android platform version 11.0">
+        <parameter name="deviceName" value="Device2"/>
+        <parameter name="port" value="4723"/>
+        <classes>
+            <class name="com.bumble.testcase.BumbleTestcases"/>
+        </classes>
+    </test>
+</suite>
