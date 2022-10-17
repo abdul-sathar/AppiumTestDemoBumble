@@ -4,7 +4,7 @@
 
     <test name="Test on Android platform version 9.0">
         <parameter name="deviceName" value="Device1"/>
-        <parameter name="port" value="4723"/>
+        <parameter name="port" value="1010"/>
         <classes>
             <class name="com.bumble.testcase.BumbleTestcases"/>
         </classes>
@@ -12,7 +12,7 @@
 
     <test name="Test on Android platform version 11.0">
         <parameter name="deviceName" value="Device2"/>
-        <parameter name="port" value="4723"/>
+        <parameter name="port" value="1020"/>
         <classes>
             <class name="com.bumble.testcase.BumbleTestcases"/>
         </classes>

@@ -3,7 +3,7 @@
     "name": "Device1",
     "caps": {
       "platformName": "Android",
-      "platformVersion": "9.0",
+      "platformVersion": "11.0",
       "deviceName": "Android emulator",
       "automationName": "UiAutomator2",
       "systemPort": "8211",
@@ -15,7 +15,7 @@
     "name": "Device2",
     "caps": {
       "platformName": "Android",
-      "platformVersion": "11.0",
+      "platformVersion": "9.0",
       "deviceName": "Android emulator",
       "automationName": "UiAutomator2",
       "systemPort": "8212",

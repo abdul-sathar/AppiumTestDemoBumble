@@ -1,5 +1,6 @@
 package com.bumble.testcase;
 
+import com.bumble.dataprovider.TestDataProvider;
 import com.bumble.pageObjects.FacebookLoginPage;
 import com.bumble.pageObjects.PhoneLoginPage;
 import org.testng.annotations.Test;
@@ -16,10 +17,10 @@ public class BumbleTestcases extends BaseTest {
         landingPage.verifyLandingScreen();
     }
 
-    @Test(description = " This test is to verify phone login with invalid phone number")
-    public void testLoginWithInvalidPhoneNumber() {
+    @Test(dataProvider = "testdata", dataProviderClass = TestDataProvider.class, description = " This test is to verify phone login with invalid phone number")
+    public void testLoginWithInvalidPhoneNumber(String country, String invalidNPhoneNumber) {
         PhoneLoginPage phoneLoginPage = landingPage.clickManualLoginButton();
-        phoneLoginPage.enterPhoneNumber("United Kingdom","2333");
+        phoneLoginPage.enterPhoneNumber(country,invalidNPhoneNumber);
         phoneLoginPage.clickNext();
         phoneLoginPage.verifyErrorMessage();
     }

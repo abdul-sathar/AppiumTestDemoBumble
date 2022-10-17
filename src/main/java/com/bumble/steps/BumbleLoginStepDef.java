@@ -16,12 +16,12 @@ import java.time.Duration;
  * @developer: Abdul Sathar Beigh
  */
 public class BumbleLoginStepDef {
-    public AppiumDriver driver;
-    public LandingPage landingPage;
-    public PhoneLoginPage phoneLoginPage;
-    @Given(": App is launched")
-    public void appIsLaunched() {
-        driver= DriverManager.setAndroidDriver("Pixel6","1001");
+    private AppiumDriver driver;
+    private LandingPage landingPage;
+    private PhoneLoginPage phoneLoginPage;
+    @Given(": App is launched with device {string} and port {string}")
+    public void appIsLaunchedWithDeviceAndPort(String deviceName, String port) {
+        driver= DriverManager.setAndroidDriver(deviceName,port);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         landingPage=new LandingPage(driver);
     }
@@ -50,5 +50,10 @@ public class BumbleLoginStepDef {
     @Then(": Click Next button")
     public void clickNextButton() {
         phoneLoginPage.clickNext();
+    }
+
+    @Then(": Close App")
+    public void closeApp() {
+        driver.quit();
     }
 }
