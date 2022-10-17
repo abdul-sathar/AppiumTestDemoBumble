@@ -1,14 +1,15 @@
-# Mobile Automation Framework for Bumble App
+# Mobile Automation Framework for Bumble App - supports both cucumber and testng tests
 This Test Automation framework is developed to automate tests that cover basic functionality for Bumble App for demo purpose.
 Note: This framework (for interview demo purpose) currently run tests on Android platform and has capability to extent to iOS platform as well
 
 Framework is designed using following Tech Stack: 
 1. ***Java*** as language, 
-2. ***Maven*** as build management tool,
-3. ***Appium*** as mobile automation tool for both Android and iOS platform, 
+2. ***Appium*** as mobile automation tool for both Android and iOS platform,
+3. ***PageObject*** as design pattern
 4. ***TestNG*** as Unit Testing Framework, 
-5. ***PageObject design pattern***
-6. ***Android SDK*** 
+5. ***Cucumber*** as BDD testing framework,
+6. ***Maven*** as build management tool
+7. ***Android SDK*** 
 
 
 ***Important Note:*** 
